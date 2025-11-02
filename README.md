@@ -1,3 +1,5 @@
+[![無料配布中 - Windows GUI](https://img.shields.io/badge/%E7%84%A1%E6%96%99%E9%85%8D%E5%B8%83%E4%B8%AD-Windows%20GUI-00C853?style=for-the-badge&logo=windows)](https://opendemjapan.booth.pm/items/7611221)
+
 # dump2vtk（日本語）
 
 LIGGGHTS/LAMMPS の dump を **VTK/VTU** に高速変換する単一ファイル **GUI + CLI** ツールです。  
