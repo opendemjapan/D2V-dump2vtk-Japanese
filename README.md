@@ -93,12 +93,6 @@ dump2vtk.exe force forcechain-*.dump ^
   --cpunum N --chunksize K --no-overwrite
 ```
 
----
-
-## 補足
-- 画像ファイル（`1.png`, `2.png`, `3.png`, `particle.png`, `force_chain.png`, `louvain.png`）はリポジトリ直下または `docs/img/` などに配置し、パスを調整してください。
-- force chain の 12 必須列（`x1 y1 z1 x2 y2 z2 id1 id2 periodic fx fy fz`）に加え、任意列はスカラー/ベクトルとして自動検出されます。
-
 ## 謝辞・ライセンス
 - 本ツールは **Pizza.py / LPP** の考え方を参考に拡張しています。例は **compaction_LIGGGHTS** を参照しました。  
 - ライセンスは [`LICENCE`](./LICENCE) をご参照ください（SPDX: `GPL-2.0-only AND MIT`）。
