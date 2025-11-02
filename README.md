@@ -1,10 +1,4 @@
-<p align="center">
-  <a href="https://opendemjapan.booth.pm/items/7611221">
-    <img
-      alt="無料ダウンロード: dump2vtk_installer.zip (156 MB)"
-      src="https://img.shields.io/badge/%E7%84%A1%E6%96%99%E3%83%80%E3%82%A6%E3%83%B3%E3%83%AD%E3%83%BC%E3%83%89-dump2vtk__installer.zip%20(156%20MB)-d32f2f?style=for-the-badge&logo=icloud&logoColor=white&labelColor=d32f2f">
-  </a>
-</p>
+
 
 
 # dump2vtk（日本語）
@@ -15,6 +9,17 @@ LIGGGHTS/LAMMPS の dump を **VTK/VTU** に高速変換する単一ファイル
 - 主な特徴: 並列処理・チャンク処理、force chain の **ストリーミング読込**、自動連番収集（数字が末尾でなく**中間**にあっても検出）、Louvain によるコミュニティ検出と集約。
 - 必要最小依存: `numpy`（GUI は `PySide6`、任意で `vtk` / `networkx` / `python-louvain`）。
 - 英語版: [README_en.md](./README_en.md) ／ ライセンス: [LICENCE](./LICENCE)
+---
+
+# コンパイル版 (windows)
+コンパイルしたものを下記で配布しています.
+<p align="center">
+  <a href="https://opendemjapan.booth.pm/items/7611221">
+    <img
+      alt="無料ダウンロード: dump2vtk_installer.zip (156 MB)"
+      src="https://img.shields.io/badge/%E7%84%A1%E6%96%99%E3%83%80%E3%82%A6%E3%83%B3%E3%83%AD%E3%83%BC%E3%83%89-dump2vtk__installer.zip%20(156%20MB)-d32f2f?style=for-the-badge&logo=icloud&logoColor=white&labelColor=d32f2f">
+  </a>
+</p>
 
 ---
 
