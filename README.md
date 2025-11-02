@@ -92,6 +92,23 @@ dump2vtk.exe force forcechain-*.dump ^
   --write-pointdata --outdir outdir/ --nan-fill 0.0 ^
   --cpunum N --chunksize K --no-overwrite
 ```
+## 4. I/O の基本
+
+- **Particle dumps**: `x/y/z` と `xs/ys/zs` を判別し、必要に応じて **スケーリング解除（unscale）** します。連続した `...x/..y/...z` や `f_*/c_*/v_*[1..3]` のようなパターンは **ベクトル** として扱われ、それ以外の列は **スカラー** になります。  
+  旧式の VTK ライターは `POINTS`、`VERTICES`、`POINT_DATA` を出力し、スナップショットごとに **バウンディングボックス**（`RECTILINEAR_GRID`）も生成します。python-vtk バックエンドは VTK バインディング経由で同等のジオメトリを生成します。
+
+- **Force chain**: `ENTRIES` には **必須 12 列** を想定しています:  
+  `x1 y1 z1 x2 y2 z2 id1 id2 periodic fx fy fz`  
+  追加の列は自動的にスカラー/ベクトルとして検出されます。エッジは `(id1, id2)` から生成されます。派生フィールドとして `force = ||(fx, fy, fz)||` と `connectionLength` を提供します。**Louvain** は `community` と `intra_comm` を追加します。`--write-pointdata` を使用すると、ノードレベルの `node_community`、`node_degree`、`node_force_sum` が含まれます。各属性について、**コミュニティの平均/合計** もエッジ上に出力されます。
+
+---
+
+## 5. 連番シリーズの自動収集
+
+- **prefix + 数字 + suffix + 拡張子**（`.gz` 対応）: 単一のファイルを追加すると、その **兄弟ファイル** を自動検出して取り込みます。  
+- 数字が **途中**（例: `forcechain-16000-renamed.dmp`）にある場合でも動作します。  
+- `forcechain-*.dmp` のようなワイルドカードもサポートされ、重複は自動的に削除されます。
+
 
 ---
 ## 謝辞・ライセンス
