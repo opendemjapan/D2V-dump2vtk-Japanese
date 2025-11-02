@@ -1,11 +1,6 @@
-<div align="center">
-  <a href="https://opendemjapan.booth.pm/items/7611221" target="_blank">
-    <img alt="無料配布中: Windows GUI" 
-         src="https://img.shields.io/badge/%E7%84%A1%E6%96%99%E9%85%8D%E5%B8%83%E4%B8%AD-Windows%20GUI-00C853?style=for-the-badge&logo=windows">
-  </a>
-  <br>
-  <sub>Compiled Windows GUI app — Free on Booth</sub>
-</div>
+| 🎁 **無料配布中** | [**Windows GUI をダウンロード →**](https://opendemjapan.booth.pm/items/7611221) |
+|---|---|
+
 
 # dump2vtk（日本語）
 
