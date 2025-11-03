@@ -115,6 +115,17 @@ dump2vtk.exe force forcechain-*.dump `
   `x1 y1 z1 x2 y2 z2 id1 id2 periodic fx fy fz`  
   追加の列は自動的にスカラー/ベクトルとして検出されます。エッジは `(id1, id2)` から生成されます。派生フィールドとして `force = ||(fx, fy, fz)||` と `connectionLength` を提供します。**Louvain** は `community` と `intra_comm` を追加します。`--write-pointdata` を使用すると、ノードレベルの `node_community`、`node_degree`、`node_force_sum` が含まれます。各属性について、**コミュニティの平均/合計** もエッジ上に出力されます。
 
+<h2>エラーについて</h2>
+<p>次のエラーが表示されることがあります。<br>
+  <code>[WinError 1455] The paging file is too small for this operation to complete.</code><br>
+  <code>[WinError 1455] ページング ファイルが小さすぎるため、この操作を完了できません。</code>
+</p>
+<p>これは Windows のコミット上限（ページング ファイルを含む利用可能メモリ）に達したときに発生します。サンドボックスなどの制限環境で起きやすい現象です。</p>
+<p><strong>対処:</strong> 並列数（CPUs）とチャンクサイズの両方を <strong>1</strong> に設定すると、メモリ使用量が大幅に下がり、エラーを回避できる場合が多いです。</p>
+<!-- 例（必要なら記載）
+<p>例（CLI）: <code>dump2vtk.exe lpp input.dmp --cpunum 1 --chunksize 1</code></p>
+-->
+
 ---
 
 ## 5. 連番シリーズの自動収集
