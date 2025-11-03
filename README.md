@@ -87,23 +87,23 @@ GUI は **3 タブ構成**です（下図参照）。
 
 ### `lpp`（粒子 Dump → VTK）
 ```bash
-dump2vtk.exe lpp DUMP_FILES... ^
-  -o OUTROOT --format {ascii|binary} ^
+dump2vtk.exe lpp DUMP_FILES... `
+  -o OUTROOT --format {ascii|binary} `
   --cpunum N --chunksize K --no-overwrite
 ```
 
 ### `rename`（ヘッダー置換）
 ```bash
-dump2vtk.exe rename ^
-  -H "ITEM: ENTRIES x1 y1 z1 x2 y2 z2 id1 id2 periodic fx fy fz Fnx Fny Fnz Ftx Fty Ftz" ^
+dump2vtk.exe rename `
+  -H "ITEM: ENTRIES x1 y1 z1 x2 y2 z2 id1 id2 periodic fx fy fz Fnx Fny Fnz Ftx Fty Ftz" `
   inputs*.dump --inplace
 ```
 
 ### `force`（フォースネットワーク + Louvain, 出力は VTK）
 ```bash
-dump2vtk.exe force forcechain-*.dump ^
-  --encoding {ascii|binary} --keep-periodic --resolution 1.0 --seed 42 ^
-  --write-pointdata --outdir outdir/ --nan-fill 0.0 ^
+dump2vtk.exe force forcechain-*.dump `
+  --encoding {ascii|binary} --keep-periodic --resolution 1.0 --seed 42 `
+  --write-pointdata --outdir outdir/ --nan-fill 0.0 `
   --cpunum N --chunksize K --no-overwrite
 ```
 ## 4. I/O の基本
