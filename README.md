@@ -127,4 +127,4 @@ dump2vtk.exe force forcechain-*.dump ^
 ---
 ## 謝辞・ライセンス
 - 本ツールは **Pizza.py / LPP** の考え方を参考に拡張しています。例は **compaction_LIGGGHTS** を参照しました。  
-- ライセンスは [`LICENCE`](./LICENCE) をご参照ください（SPDX: `GPL-2.0-only AND MIT`）。
+- ライセンスは [`LICENCE`](./LICENCE_ja.txt) をご参照ください（SPDX: `GPL-2.0-only AND MIT`）。
